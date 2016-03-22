@@ -13,9 +13,13 @@ import java.util.Random;
 import pacman.controllers.Controller;
 import pacman.controllers.HumanController;
 import pacman.controllers.KeyBoardInput;
+import pacman.controllers.Siyu_Qiu.A_Controller;
 import pacman.controllers.Siyu_Qiu.BFS_Controller;
 import pacman.controllers.Siyu_Qiu.DFS_Controller;
+import pacman.controllers.Siyu_Qiu.Evolution_Controller;
+import pacman.controllers.Siyu_Qiu.Hill_climbing_controller;
 import pacman.controllers.Siyu_Qiu.Iterative_deepening_Controller;
+import pacman.controllers.Siyu_Qiu.Simulated_annealing_Controller;
 import pacman.controllers.examples.AggressiveGhosts;
 import pacman.controllers.examples.Legacy;
 import pacman.controllers.examples.Legacy2TheReckoning;
@@ -66,9 +70,19 @@ public class Executor
 		boolean visual=true;
 //		exec.runGameTimed(new NearestPillPacMan(),new AggressiveGhosts(),visual);
 //     	exec.runGameTimed(new StarterPacMan(),new StarterGhosts(),visual);
+		//Assignment 1
 //		exec.runGameTimed(new BFS_Controller(),new StarterGhosts(),visual);
 //		exec.runGameTimed(new DFS_Controller(),new StarterGhosts(),visual);
 //		exec.runGameTimed(new Iterative_deepening_Controller(),new StarterGhosts(),visual);
+		
+		//Assignment 2
+//		exec.runGameTimed(new A_Controller(),new StarterGhosts(),visual);
+//		exec.runGameTimed(new Hill_climbing_controller(),new StarterGhosts(),visual);
+//		exec.runGameTimed(new Simulated_annealing_Controller(),new StarterGhosts(),visual);
+		
+		//Assignment 3
+		exec.runGameTimed(new Evolution_Controller(),new StarterGhosts(),visual);
+		
 //		exec.runGameTimed(new HumanController(new KeyBoardInput()),new StarterGhosts(),visual);	
 		//*/
 		

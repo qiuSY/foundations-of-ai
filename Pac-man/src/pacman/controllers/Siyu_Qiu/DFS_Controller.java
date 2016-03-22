@@ -49,6 +49,7 @@ public class DFS_Controller extends Controller<MOVE> {
 	public int dfs_pacMan(PacManNode rootState,int maxDepth){
 		int highScore=Integer.MIN_VALUE;
 		MOVE[] allMoves=MOVE.values();
+		System.out.println(rootState.depth+1);
 		
 		for(MOVE m:allMoves){
 			Game gameCopy=rootState.gameState.copy();

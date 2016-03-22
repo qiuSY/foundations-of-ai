@@ -24,6 +24,7 @@ public class BFS_Controller extends Controller<MOVE> {
 		Random rnd=new Random();
 		List<MOVE> bestMoves=new ArrayList<MOVE>();
 		
+		
 		for(MOVE m: allMoves){
 			System.out.println("Trying Move: " + m);
 			//In order of get the best move, we need to 
@@ -38,7 +39,7 @@ public class BFS_Controller extends Controller<MOVE> {
 			//for example maxdepth is 7
 			int tempHighScore=this.bfs_PacMan(new PacManNode(gameTmp,0),7);
 			
-			if (tempHighScore>highScore){
+			if (tempHighScore>=highScore){
 				highScore=tempHighScore;
 				bestMove=m;
 			}
@@ -63,7 +64,7 @@ public class BFS_Controller extends Controller<MOVE> {
 			//Queue for BFS
 			Queue<PacManNode> queue = new LinkedList<PacManNode> ();
 			
-			//Enqueue the start state of Pac-Man
+//			Enqueue the start state of Pac-Man
 			queue.offer(rootState);
 			
 			while(!queue.isEmpty()){
@@ -72,7 +73,8 @@ public class BFS_Controller extends Controller<MOVE> {
 					//get Score when we meet max Depth
 					int score=node.gameState.getScore();
 					if(highScore<score) highScore=score;
-					
+
+//					System.out.println("tempScore: " + score);
 				}
 				else{
 					//else we find best Move in children
@@ -86,6 +88,8 @@ public class BFS_Controller extends Controller<MOVE> {
 					}
 				}
 			}
+			
+			System.out.println("in: highScore"+highScore);
 			return highScore;
 		}
 }

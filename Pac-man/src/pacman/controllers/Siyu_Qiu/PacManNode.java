@@ -9,16 +9,19 @@ import pacman.game.Game;
 
 /**
  *
- * @author amy
+ * PacManNode for BFS,DFS,IDFS
  */
 public class PacManNode 
 {
-    Game gameState;
+	//Parameters for BFS,DFS,IDFS
+	Game gameState;
     int depth;
+    int score;
     
     public PacManNode(Game game, int depth)
     {
         this.gameState = game;
         this.depth = depth;
+		this.score=game.getScore();
     }
 }
