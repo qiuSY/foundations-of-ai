@@ -19,6 +19,8 @@ import pacman.controllers.Siyu_Qiu.DFS_Controller;
 import pacman.controllers.Siyu_Qiu.Evolution_Controller;
 import pacman.controllers.Siyu_Qiu.Hill_climbing_controller;
 import pacman.controllers.Siyu_Qiu.Iterative_deepening_Controller;
+import pacman.controllers.Siyu_Qiu.KNN_Controller;
+import pacman.controllers.Siyu_Qiu.Self_invented_Controller;
 import pacman.controllers.Siyu_Qiu.Simulated_annealing_Controller;
 import pacman.controllers.examples.AggressiveGhosts;
 import pacman.controllers.examples.Legacy;
@@ -81,7 +83,13 @@ public class Executor
 //		exec.runGameTimed(new Simulated_annealing_Controller(),new StarterGhosts(),visual);
 		
 		//Assignment 3
-		exec.runGameTimed(new Evolution_Controller(),new StarterGhosts(),visual);
+//		exec.runGameTimed(new Evolution_Controller(),new StarterGhosts(),visual);
+		
+		//Assignment 4
+		exec.runGameTimed(new KNN_Controller(), new StarterGhosts(),visual);
+		
+		//Final Project
+//		exec.runGameTimed(new Self_invented_Controller(),new StarterGhosts(),visual);
 		
 //		exec.runGameTimed(new HumanController(new KeyBoardInput()),new StarterGhosts(),visual);	
 		//*/
